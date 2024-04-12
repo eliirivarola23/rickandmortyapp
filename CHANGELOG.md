@@ -1,7 +1,9 @@
-## Changelog Develop
+## Version 1.0.0
 
-🚀 develop-1.0.0 - 23/02/2024
+#### V1.0.0
 
-- Se agrega ContainerLayout.
-- Corrección linteo, componentes y archivos.
-- Se agrega hook toast
+🚀 Added
+
+- Architectural design is created
+- Boundary error added
+- Services config added

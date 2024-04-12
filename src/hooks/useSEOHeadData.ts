@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
 
-
 export const useSEOHeadData = ({ title }: { title: string }): void => {
   const prevTitle = useRef<string>(document.title);
   const prevDescription = useRef<string>(document.querySelector('meta[name="description"]')?.getAttribute('content') || '');
@@ -12,10 +11,10 @@ export const useSEOHeadData = ({ title }: { title: string }): void => {
 
     if (title && title !== previousTitle) {
       const newTitle = `${title.charAt(0).toUpperCase()}${title.slice(1)}`;
-      document.title = `${newTitle} | Phrases 📝`;
+      document.title = `${newTitle} | RickandMorty `;
 
       if (metaDescription) {
-        metaDescription.setAttribute('content', `Create phrases and save them - ${newTitle}`);
+        metaDescription.setAttribute('content', `know characters, episodes, everything about rick and morty - ${newTitle}`);
       }
     }
 
