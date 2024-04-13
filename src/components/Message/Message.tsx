@@ -6,7 +6,7 @@ interface PropsMessage {
 }
 
 const Message = ({ text = 'Cargando...', idTest = 'test-loading' }: PropsMessage) => {
-  return <ContainerLayout idTest={idTest}>{text}</ContainerLayout>;
+  return <ContainerLayout data-testid={idTest}>{text}</ContainerLayout>;
 };
 
 export default Message;

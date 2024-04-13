@@ -1,12 +1,8 @@
-import axios, { AxiosRequestConfig } from "axios";
-import { AxiosInterceptor } from "./interceptors/axios.interceptor";
-import { getUrlApi } from "../config/setting";
+import axios, { AxiosRequestConfig } from 'axios';
+import { AxiosInterceptor } from './interceptors/axios.interceptor';
+import { getUrlApi } from '../config/setting';
 
-export const callApi = async ({
-  url,
-  method = "get",
-  data,
-}: AxiosRequestConfig) => {
+export const callApi = async ({ url, method = 'get', data }: AxiosRequestConfig) => {
   AxiosInterceptor();
 
   const source = axios.CancelToken.source();
@@ -24,10 +20,10 @@ export const callApi = async ({
     return { data: response.data };
   } catch (error) {
     if (axios.isCancel(error)) {
-      throw new Error("Request canceled");
+      throw new Error('Request canceled');
     }
     throw error;
   } finally {
-    source.cancel("Cleanup");
+    source.cancel('Cleanup');
   }
 };
