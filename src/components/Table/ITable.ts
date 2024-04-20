@@ -1,7 +1,7 @@
 import { TableProps } from '@chakra-ui/react';
 
 export interface IDataItem {
-  [key: string]: any;
+  [key: string]: never;
 }
 
 interface IParamsData {

@@ -3,7 +3,6 @@ import { Suspense, lazy } from 'react';
 import Message from './components/Message';
 import { ErrorBoundary } from './components/ErrorBoundary/ErrorBoundary';
 import { messageTextError } from './constants/generalText';
-import { SnackbarUtilitiesConfigutator } from './components/Snackbar/snackbar-manager';
 import { ChakraProvider } from '@chakra-ui/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
@@ -16,7 +15,6 @@ function App() {
       <ErrorBoundary fallback={<Message text={messageTextError} />}>
         <QueryClientProvider client={queryClient}>
           <ChakraProvider>
-            <SnackbarUtilitiesConfigutator />
             <Home />
           </ChakraProvider>
         </QueryClientProvider>

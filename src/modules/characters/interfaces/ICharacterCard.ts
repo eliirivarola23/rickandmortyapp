@@ -5,4 +5,6 @@ export interface PropsCharacterCard {
   name: string;
   episodes: number;
   id: number | string;
+  onClick?: (id?: PropsCharacterCard['id']) => void;
+  selectedIdCard?: PropsCharacterCard['id'];
 }
