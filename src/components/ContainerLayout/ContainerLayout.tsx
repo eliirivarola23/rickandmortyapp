@@ -2,13 +2,13 @@ import { Wrapper } from './ContainerStyles';
 
 export interface PropsLayout {
   children: React.ReactNode;
-  component?: 'layout' | 'paper';
+  variant?: 'layout' | 'paper';
   idTest?: string;
 }
 
-const ContainerLayout = ({ children, component = 'layout', idTest = 'test-section' }: PropsLayout) => {
+const ContainerLayout = ({ children, variant = 'layout', idTest = 'test-section' }: PropsLayout) => {
   return (
-    <Wrapper className={component} data-testid={idTest}>
+    <Wrapper className={variant} data-testid={idTest}>
       {children}
     </Wrapper>
   );

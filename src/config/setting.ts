@@ -1,1 +1,1 @@
-export const getUrlApi = () => import.meta.env.VITE_BASE_URL || "localhost";
+export const getUrlApi = () => 'https://rickandmortyapi.com/' || 'localhost';

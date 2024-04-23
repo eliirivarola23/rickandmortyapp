@@ -7,3 +7,4 @@
 - Architectural design is created
 - Boundary error added
 - Services config added
+- Choice of 2 characters
