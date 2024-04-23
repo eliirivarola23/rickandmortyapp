@@ -5,7 +5,7 @@ interface PropsMessage {
   idTest?: string;
 }
 
-const Message = ({ text = 'Cargando...', idTest = 'test-loading' }: PropsMessage) => {
+const Message = ({ text = 'Loading...', idTest = 'test-loading' }: PropsMessage) => {
   return <ContainerLayout data-testid={idTest}>{text}</ContainerLayout>;
 };
 

@@ -11,13 +11,15 @@ const EpisodeTable = ({ data, title, isLoading, id }: IEpisodeTable) => {
       flexDir="column"
       minW="300px"
       flexWrap="wrap"
-      outline="1px solid red"
-      maxW="30%"
+      borderRadius="10px"
+      bg="var(--color-black-tertiary)"
+      maxW="31vw"
       alignItems="center"
       minH="500px"
       h="max-content"
+      mt={3}
     >
-      <Loading maxW="28%" height="25px" isLoaded={!isLoading}>
+      <Loading maxW="28%" isLoaded={!isLoading}>
         <Heading as="h3" size="sm">
           {title}
         </Heading>

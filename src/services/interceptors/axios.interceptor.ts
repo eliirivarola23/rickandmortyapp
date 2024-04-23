@@ -17,13 +17,6 @@ export const AxiosInterceptor = () => {
       return response.data || response;
     },
     error => {
-      // const errorCode = error.response?.data?.error || error.code;
-      // if (errorCode) {
-      //   const newErrors = getValidationError(errorCode);
-
-      // }
-      throw error;
-
       throw error.response?.data || error;
     }
   );

@@ -1,7 +1,7 @@
 // @ts-nocheck
 import CharacterCard from './CharacterCard';
 import WithList from '../../../hocs/WithList';
-import { Box, Grid } from '@chakra-ui/react';
+import { Box, Grid, Heading } from '@chakra-ui/react';
 import Paginator from '../../../components/Paginator/Paginator';
 import { useQuery } from '@tanstack/react-query';
 import { useContext, useState } from 'react';
@@ -35,20 +35,26 @@ const CharacterList = ({ title = CHARACTER_NAMES.character_one }) => {
   if (isError) return <p>Error: {error.message}</p>;
 
   return (
-    <Box w="48%" outline="1px solid blue">
-      {title}
-      <Loading
-        isLoaded={!isLoading && !isLoadingDataGeneral}
-        repeatSkeleton={6}
-        h="200px"
-        w="150px"
-        styleStack={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap' }}
-      >
-        <Grid templateColumns="repeat(auto-fill, minmax(160px, 1fr))" gap={1}>
-          {CharacterListWrapper}
-        </Grid>
-      </Loading>
-      <Paginator page={page} totalPages={data?.info?.pages || dataGeneral?.info?.pages} onPageChange={handleChangePage} />
+    <Box w={{ base: '42vw', lg: '45vw' }} p={2} textAlign={title === CHARACTER_NAMES.character_two ? 'end' : 'start'}>
+      <Heading as="h3" size="md" m={3}>
+        {title}
+      </Heading>
+      <Grid bg="var(--color-black-tertiary)" borderRadius="18px" p={{ base: 1, lg: 3 }}>
+        <Loading
+          isLoaded={!isLoading && !isLoadingDataGeneral}
+          repeatSkeleton={10}
+          h="200px"
+          w="150px"
+          styleStack={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap' }}
+        >
+          <Grid templateColumns="repeat(auto-fill, minmax(110px, 1fr))" gap={1}>
+            {CharacterListWrapper}
+          </Grid>
+        </Loading>
+      </Grid>
+      <Grid>
+        <Paginator page={page} totalPages={data?.info?.pages || dataGeneral?.info?.pages} onPageChange={handleChangePage} />
+      </Grid>
     </Box>
   );
 };

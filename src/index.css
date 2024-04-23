@@ -8,13 +8,14 @@
 
 :root {
   --color-black: #000000;
-  --color-black-primary: #13131d;
-  --color-black-secondary: #323131;
-  --color-black-tertiary: #313341;
+  --color-black-primary: #242424;
+  --color-black-secondary: #2b2828;
+  --color-black-tertiary: #181818;
   --color-white: #ffffff;
   --background-creme: #ededed;
   --color-grey: #e3e6e9;
-  --color-green: #37d28a;
+  --color-purpure: #5200bb;
+  --color-purpure-light: #5f0ccc;
   --color-gradient-primary: linear-gradient(to left, #5f6ffa 0%, #ff00cc 51%, #5f6ffa 100%);
   --color-pink-primary: #ff00cc;
   --color-grey-secondary: #a0a0a0;

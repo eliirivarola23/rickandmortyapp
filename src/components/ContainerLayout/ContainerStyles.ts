@@ -5,7 +5,7 @@ export const Wrapper = styled('section')`
   text-align: center;
   &.layout {
     padding: 20px;
-    background: var(--color-black-primary);
+    background: var(--color-black);
     color: var(--color-grey-secondary);
   }
   &.paper {

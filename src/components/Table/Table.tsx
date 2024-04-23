@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Table as TableChakra, Thead, Tbody, Tr, Th, Td, TableContainer, Tooltip } from '@chakra-ui/react';
 import { IDataItem, ITable } from './ITable';
 import { messageNoResultText } from '../../constants/generalText';

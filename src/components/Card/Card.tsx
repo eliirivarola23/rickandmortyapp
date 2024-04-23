@@ -8,9 +8,11 @@ interface PropsCard extends BoxProps {
 
 const Card = ({ children, sx, header, ...rest }: Partial<PropsCard>) => {
   return (
-    <CardChakra maxW="sm" {...(sx && { sx })} boxShadow="1px 0px 9px 2px var(--color-black-transparent)" {...(rest && { ...rest })}>
+    <CardChakra maxW="sm" {...(sx && { sx })} {...(rest && { ...rest })} minHeight="200px">
       {header && <CardHeader>{header}</CardHeader>}
-      <CardBody>{children}</CardBody>
+      <CardBody p={3} textAlign="start">
+        {children}
+      </CardBody>
     </CardChakra>
   );
 };

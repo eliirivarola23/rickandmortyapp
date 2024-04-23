@@ -30,7 +30,6 @@ const EpisodeContainer = () => {
   const { character1, sharedEpisodes, character2 } = data || {};
 
   const seeToast = () => {
-    toast.closeAll();
     toast({
       title: SELECTED_CARD_ERRORS_TEXT.title,
       description: SELECTED_CARD_ERRORS_TEXT.description,
@@ -43,6 +42,9 @@ const EpisodeContainer = () => {
   useEffect(() => {
     if (allValuesEqual && hasCardsSelected) seeToast();
     // eslint-disable-next-line
+    return () => {
+      toast.closeAll();
+    };
   }, [selectedCards]);
 
   if (!hasCardsSelected) return null;

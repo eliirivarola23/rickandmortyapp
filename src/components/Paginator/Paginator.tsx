@@ -14,12 +14,26 @@ const Paginator = ({ totalItems = 0, page, itemsPerPage = 0, onPageChange, total
   };
 
   return (
-    <ButtonGroup spacing="2" justifyContent="space-between" w="max-content" alignItems="center">
-      <Button onClick={() => handleChangePage(currentPage - initialPage)} isDisabled={isMatchPage} variant="outline" colorScheme="gray">
+    <ButtonGroup
+      m="10px 0"
+      spacing="2"
+      borderRadius="15px"
+      p={3}
+      justifyContent="space-between"
+      alignItems="center"
+      bg="var(--color-black-tertiary)"
+      flexWrap="wrap"
+    >
+      <Button onClick={() => handleChangePage(currentPage - initialPage)} isDisabled={isMatchPage} borderRadius="18px">
         Previous
       </Button>
       <Text>{`Page ${currentPage} of ${resultTotalPages}`}</Text>
-      <Button onClick={() => handleChangePage(currentPage + initialPage)} isDisabled={currentPage === resultTotalPages} colorScheme="red">
+      <Button
+        onClick={() => handleChangePage(currentPage + initialPage)}
+        isDisabled={currentPage === resultTotalPages}
+        colorScheme="red"
+        borderRadius="18px"
+      >
         Next
       </Button>
     </ButtonGroup>
